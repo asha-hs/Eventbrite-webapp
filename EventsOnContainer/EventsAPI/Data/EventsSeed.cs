@@ -41,10 +41,31 @@ namespace EventsAPI.Data
             {
                 new Location
                 {
-                    Lat = 47.6062M,
-                    Lon = -122.33207M,
-                    City = "Seattle",
-                    State = "WA"
+                    Lat = 47.6739M,
+                    Lon =  -122.1215M,
+                    City = "Fairmont",
+                    State = "WV"
+                },
+                new Location
+                {
+                    Lat = 47.6739M,
+                    Lon =  -122.1215M,
+                    City = "Columbus",
+                    State = "OH"
+                },
+                new Location
+                {
+                    Lat = 47.6739M,
+                    Lon =  -122.1215M,
+                    City = "Heath",
+                    State = "OH"
+                },
+                new Location
+                {
+                    Lat = 47.6739M,
+                    Lon =  -122.1215M,
+                    City = "Wheeling",
+                    State = "WV"
                 },
                 new Location
                 {
@@ -118,13 +139,6 @@ namespace EventsAPI.Data
                 },
                 new Location
                 {
-                    Lat = 47.65145M,
-                    Lon = -122.35365M,
-                    City = "Seattle",
-                    State = "WA"
-                },
-                new Location
-                {
                     Lat = 47.60866M,
                     Lon = -122.34520M,
                     City = "Seattle",
@@ -137,6 +151,66 @@ namespace EventsAPI.Data
         {
             return new List<Event>
             {
+                new Event
+                {
+                    EventsTypeId = 5,
+                    EventCreaterId = 21,
+                    LocationId = 15,
+                    Description = "Mother Son Dance for boys Pre-K through 7th grade.",
+                    Name = "Mother Son Dance",
+                    Price = 20.0M,
+                    PictureUrl = "http://externaleventsbaseurltobereplaced/api/pic/25",
+                    StartTime = new DateTime(2021,08,20,5,10,20,DateTimeKind.Local),
+                    EndTime = new DateTime(2021,8,20,6,10,20,DateTimeKind.Local),
+                },
+                new Event
+                {
+                    EventsTypeId = 5,
+                    EventCreaterId = 21,
+                    LocationId = 15,
+                    Description = "Father Daughter Dance for girls Pre-K through 12th grade.",
+                    Name = "Father Daughter Dance",
+                    Price = 20.0M,
+                    PictureUrl = "http://externaleventsbaseurltobereplaced/api/pic/24",
+                    StartTime = new DateTime(2021,08,21,5,10,20,DateTimeKind.Local),
+                    EndTime = new DateTime(2021,8,21,6,10,20,DateTimeKind.Local),
+                },
+                new Event
+                {
+                    EventsTypeId = 5,
+                    EventCreaterId = 20,
+                    LocationId = 14,
+                    Description = "Join CGB and the Empower Our Youth Foundation by volunteering for their Dare 2 Be Different Anti-Bullying Fashion Show",
+                    Name = "Volunteer for Dare 2 Be Different Anti-Bullying Fashion Show - 8/21/21",
+                    Price = 0.0M,
+                    PictureUrl = "http://externaleventsbaseurltobereplaced/api/pic/23",
+                    StartTime = new DateTime(2021,09,21,5,10,20,DateTimeKind.Local),
+                    EndTime = new DateTime(2021,9,21,6,10,20,DateTimeKind.Local),
+                },
+                new Event
+                {
+                    EventsTypeId = 5,
+                    EventCreaterId = 19,
+                    LocationId = 13,
+                    Description = "Pony Express is a recreational horseback riding program for children with disabilities. Riding is an excellent form of recreation.",
+                    Name = "Pony Express Fall 2021",
+                    Price = 25.0M,
+                    PictureUrl = "http://externaleventsbaseurltobereplaced/api/pic/22",
+                    StartTime = new DateTime(2021,09,14,5,10,20,DateTimeKind.Local),
+                    EndTime = new DateTime(2021,10,19,6,10,20,DateTimeKind.Local),
+                },
+                new Event
+                {
+                    EventsTypeId = 5,
+                    EventCreaterId = 18,
+                    LocationId = 12,
+                    Description = "Disney movie Frozen is brought to life on the CPAC stage. Featuring over 40 local talented youth. The coolest show this summer!",
+                    Name = "Frozen Jr",
+                    Price = 10.0M,
+                    PictureUrl = "http://externaleventsbaseurltobereplaced/api/pic/21",
+                    StartTime = new DateTime(2021,08,22,5,10,20,DateTimeKind.Local),
+                    EndTime = new DateTime(2021,08,15,6,10,20,DateTimeKind.Local),
+                },
                 new Event
                 {
                     EventsTypeId = 3,
@@ -165,7 +239,7 @@ namespace EventsAPI.Data
                 {
                     EventsTypeId = 3,
                     EventCreaterId = 3,
-                    LocationId = 3,
+                    LocationId = 10,
                     Description = "Thinkful Webinar | Getting Started in Tech",
                     Name = "Getting Started in Tech",
                     Price=50.9M,
@@ -177,7 +251,7 @@ namespace EventsAPI.Data
                 {
                     EventsTypeId = 3,
                     EventCreaterId = 2,
-                    LocationId = 4,
+                    LocationId = 9,
                     Description = "Develop a Successful Healthcare Tech Startup Business Hackathon | Healthcare Tech Entrepreneurship Workshop | Medtech Entrepreneur Training",
                     Name = "Healthcare Tech Startup Business",
                     Price = 50.9M,
@@ -189,20 +263,20 @@ namespace EventsAPI.Data
                 {
                     EventsTypeId = 3,
                     EventCreaterId = 2,
-                    LocationId = 3,
+                    LocationId = 2,
                     Description = "Develop a Successful Food Tech Startup Business Hackathon | Startup Hackathon | Entrepreneur Hackathon | Entrepreneurship Hackathon",
                     Name = "Food Tech Startup Business",
                     Price = 50.9M,PictureUrl="http://externaleventsbaseurltobereplaced/api/pic/5",
                     StartTime = new DateTime(2021,08,19,5,10,20,DateTimeKind.Local),
                     EndTime = new DateTime(2021,08,19,6,10,20,DateTimeKind.Local),
                 },
-                               
-                
+
+
                 new Event
                 {
-                    EventsTypeId = 4,
+                    EventsTypeId = 2,
                     EventCreaterId = 6,
-                    LocationId = 6,
+                    LocationId = 7,
                     Description = "Join us at The River House in Capon Bridge, WV every Saturday from 12-3 for a free drop in art activity. All materials provided!",
                     Name = "Art for All- Free Art Activity for all ages!",
                     Price = 0.0M,
@@ -212,9 +286,9 @@ namespace EventsAPI.Data
                 },
                 new Event
                 {
-                    EventsTypeId = 4,
+                    EventsTypeId = 2,
                     EventCreaterId = 7,
-                    LocationId = 7,
+                    LocationId = 6,
                     Description = "The Ecstasy of Gold is Beckley Art Center's newest solo exhibition featuring the collage artistry of artist, Psychoflauge.",
                     Name = "The Ecstasy of Gold | Exhibition Opening Reception",
                     Price = 0.0M,
@@ -224,9 +298,9 @@ namespace EventsAPI.Data
                 },
                 new Event
                 {
-                    EventsTypeId = 4,
+                    EventsTypeId = 2,
                     EventCreaterId = 8,
-                    LocationId = 8,
+                    LocationId = 5,
                     Description = "Join your friends at a top judged festival in America! 45th Annual Fall Mountain Heritage Arts & Crafts Festival 2021, FREE WV Wine Tastings",
                     Name = "45th Annual Fall Mountain Heritage Arts & Crafts Festival",
                     Price = 0.0M,
@@ -236,9 +310,9 @@ namespace EventsAPI.Data
                 },
                 new Event
                 {
-                    EventsTypeId = 4,
+                    EventsTypeId = 2,
                     EventCreaterId = 9,
-                    LocationId = 9,
+                    LocationId = 4,
                     Description = "FIGURE DRAWING @ Studio 3D July - August Session Starting July 29th we're hosting 4 Figure Drawing sessions!",
                     Name = "Figure Drawing July-August Session",
                     Price = 40.0M,
@@ -248,9 +322,9 @@ namespace EventsAPI.Data
                 },
                 new Event
                 {
-                    EventsTypeId = 4,
+                    EventsTypeId = 2,
                     EventCreaterId = 10,
-                    LocationId = 10,
+                    LocationId = 3,
                     Description = "We will be painting a Sunflower in the style of Van Gogh. All materials are included to paint your masterpiece. No experience necessary, our",
                     Name = "Peak Of The Bloom Sunflower Painting Class",
                     Price = 29.99M,
@@ -267,7 +341,7 @@ namespace EventsAPI.Data
                     StartTime = new DateTime(2021, 9, 18, 16, 0, 0, DateTimeKind.Local),
                     EndTime = new DateTime(2021, 9, 18, 16, 0, 0, DateTimeKind.Local),
                     EventCreaterId = 6,
-                    EventsTypeId = 5,
+                    EventsTypeId = 1,
                     LocationId = 1,
                     PictureUrl = "http://externaleventsbaseurltobereplaced/api/pic/11"
                 },
@@ -279,7 +353,7 @@ namespace EventsAPI.Data
                     StartTime = new DateTime(2021, 9, 9, 16, 0, 0, DateTimeKind.Local),
                     EndTime = new DateTime(2021, 9, 9, 16, 0, 0, DateTimeKind.Local),
                     EventCreaterId = 6,
-                    EventsTypeId = 5,
+                    EventsTypeId = 1,
                     LocationId = 1,
                     PictureUrl = "http://externaleventsbaseurltobereplaced/api/pic/12"
                 },
@@ -291,7 +365,7 @@ namespace EventsAPI.Data
                     StartTime = new DateTime(2021, 9, 15, 16, 0, 0, DateTimeKind.Local),
                     EndTime = new DateTime(2021, 9, 15, 16, 0, 0, DateTimeKind.Local),
                     EventCreaterId = 17,
-                    EventsTypeId = 5,
+                    EventsTypeId = 1,
                     LocationId = 1,
                     PictureUrl = "http://externaleventsbaseurltobereplaced/api/pic/13"
                 },
@@ -303,7 +377,7 @@ namespace EventsAPI.Data
                     StartTime = new DateTime(2021, 9, 18, 17,0,0,DateTimeKind.Local),
                     EndTime = new DateTime(2021, 9, 18, 18,0,0,DateTimeKind.Local),
                     EventCreaterId = 7,
-                    EventsTypeId = 5,
+                    EventsTypeId = 1,
                     LocationId = 1,
                     PictureUrl = "http://externaleventsbaseurltobereplaced/api/pic/14"
                 },
@@ -315,15 +389,15 @@ namespace EventsAPI.Data
                     StartTime = new DateTime(2021, 9, 28, 16,0,0,DateTimeKind.Local),
                     EndTime = new DateTime(2021, 9, 28, 17,0,0,DateTimeKind.Local),
                     EventCreaterId = 6,
-                    EventsTypeId = 5,
+                    EventsTypeId = 1,
                     LocationId = 1,
                     PictureUrl = "http://externaleventsbaseurltobereplaced/api/pic/15"
                 },
                 new Event
                 {
-                    EventsTypeId = 2,
+                    EventsTypeId = 4,
                     EventCreaterId =13,
-                    LocationId = 11,
+                    LocationId = 2,
                     Description = "Discover the power of your breath to relieve stress, ease anxiety and calm your mind in a free LIVE and interactive session.",
                     Name = "Beyond Breath - An Introduction to SKY Breath Meditation-Anchorage",
                     Price = 0.0M,
@@ -333,7 +407,7 @@ namespace EventsAPI.Data
                 },
                  new Event
                 {
-                     EventsTypeId = 2,
+                     EventsTypeId = 4,
                     EventCreaterId =13,
                     LocationId = 1,
                     Description = "Discover the power of your breath to relieve stress, ease anxiety and calm your mind in a free LIVE and interactive session.",
@@ -347,9 +421,9 @@ namespace EventsAPI.Data
 
                   new Event
                 {
-                    EventsTypeId = 2,
-                    EventCreaterId =14,
-                    LocationId = 5,
+                    EventsTypeId = 4,
+                    EventCreaterId = 14,
+                    LocationId = 8,
                     Description = "Pranayama △ Joy of Breathing",
                     Name = "Free Online Breathwork Class. Unlock the benefits of Joy of Breathing. Awaken a conscious connection with your body, mind, heart and spirit.",
                     Price = 0.0M,
@@ -360,9 +434,9 @@ namespace EventsAPI.Data
 
                    new Event
                 {
-                    EventsTypeId = 2,
-                    EventCreaterId =15,
-                    LocationId =12,
+                    EventsTypeId = 4,
+                    EventCreaterId = 15,
+                    LocationId = 1,
                     Description = "Zumba® with Daniel Santos: In-Person and Virtual",
                     Name = "Zumba® fuses hypnotic Latin rhythms and easy-to-follow moves to create a one-of-a-kind fitness program.",
                     Price = 15.50M,
@@ -372,9 +446,9 @@ namespace EventsAPI.Data
                 },
                     new Event
                 {
-                    EventsTypeId = 2,
+                    EventsTypeId = 4,
                     EventCreaterId =16,
-                    LocationId = 13,
+                    LocationId = 1,
                     Description = "A workout for the entire family! Seattle Dance Fitness will be guiding you through an easy fun dance workout that'll have you making special fun memories! No need for any dance experience!",
                     Name = "DropSound Family Dance Class",
                     Price = 20.99M,
@@ -419,6 +493,22 @@ namespace EventsAPI.Data
             {
                 new EventsHost
                 {
+                    Creater = "Crystalline Events"
+                },
+                new EventsHost
+                {
+                    Creater = "Columbus Gives Back"
+                },
+                new EventsHost
+                {
+                    Creater = "Licking/Knox Goodwill Industries, Inc."
+                },
+                new EventsHost
+                {
+                    Creater = "Cambridge Performing Arts Centre"
+                },
+                new EventsHost
+                {
                     Creater = "Tech Career Fair"
                 },
                 new EventsHost
@@ -446,7 +536,7 @@ namespace EventsAPI.Data
                     Creater = "Homemade Events"
                 },
                 new EventsHost
-                { 
+                {
                     Creater = "The River House"
                 },
                 new EventsHost

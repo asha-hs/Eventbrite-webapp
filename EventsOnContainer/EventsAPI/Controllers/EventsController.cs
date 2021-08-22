@@ -25,7 +25,7 @@ namespace EventsAPI.Controllers
 
         }
         [HttpGet("[action]")]
-        public async Task<IActionResult> Events(
+        public async Task<IActionResult> Events1(
             [FromQuery] int pageIndex = 0,
             [FromQuery] int pageSize = 6)
         {
@@ -68,7 +68,7 @@ namespace EventsAPI.Controllers
                 .Skip(pageIndex * pageSize)
                 .Take(pageSize)
                 .ToListAsync();
-                
+
 
             items = ChangePictureUrl(items);
             var model = new PaginatedEventsViewModel
@@ -117,7 +117,7 @@ namespace EventsAPI.Controllers
                 .Skip(pageIndex * pageSize)
                 .Take(pageSize)
                 .ToListAsync();
-
+           
 
             items = ChangePictureUrl(items);
             var model = new PaginatedEventsViewModel
@@ -130,5 +130,55 @@ namespace EventsAPI.Controllers
             return Ok(model);
         }
 
+        [HttpGet("[action]")]
+        public async Task<IActionResult> Eventtypes()
+        {
+            var types = await _context.EventTypes.ToListAsync();
+            return Ok(types);
+        }
+        [HttpGet("[action]")]
+        public async Task<IActionResult> EventLocations()
+        {
+            var locations = await _context.Locations.ToListAsync();
+            return Ok(locations);
+        }
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> Events(
+            [FromQuery] int? eventTypeId,
+            [FromQuery] int? eventlocationId,
+            [FromQuery] int pageIndex = 0,
+            [FromQuery] int pageSize = 6)
+        {
+            var query = (IQueryable<Event>)_context.Events;
+            if (eventTypeId.HasValue)
+            {
+                query = query.Where(e => e.EventsTypeId == eventTypeId.Value);
+            }
+            if (eventlocationId.HasValue)
+            {
+                query = query.Where(e => e.LocationId == eventlocationId.Value);
+            }
+
+            var count = query.LongCountAsync();
+
+            var items = await query
+                .OrderBy(c => c.Name)
+                .Skip(pageIndex * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            items = ChangePictureUrl(items);
+            var model = new PaginatedEventsViewModel
+            {
+                PageIndex = pageIndex,
+                PageSize = items.Count,
+                Count = count.Result,
+
+                Data = items
+            };
+            return Ok(model);
+
+        }
     }
 }
