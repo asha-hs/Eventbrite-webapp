@@ -31,5 +31,39 @@ namespace WebMvc.Infrastructure
                 return $"{baseUri}Events{filterQs}pageIndex={page}&pageSize={take}";
             }
         }
+
+        public static class EventsBasket 
+        {
+            public static string GetBasket(string baseuri, string basketId)
+            {
+                return $"{baseuri}/{basketId}";
+            }
+
+            public static string UpdateBasket(string baseuri)
+            {
+                return baseuri;
+            }
+            public static string CleanBasket(string baseuri, string basketid)
+            {
+                return $"{baseuri}/{basketid}";
+            }
+        }
+
+        public static class Order
+        {
+            public static string GetOrder(string baseUri, string orderId)
+            {
+                return $"{baseUri}/{orderId}";
+            }
+
+            public static string GetOrders(string baseUri, string buyerId)
+            {
+                return $"{baseUri}/getorders?buyerId={buyerId}";
+            }
+            public static string AddNewOrder(string baseUri)
+            {
+                return $"{baseUri}/new";
+            }
+        }
     }
 }

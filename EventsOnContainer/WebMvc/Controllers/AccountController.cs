@@ -42,13 +42,16 @@ namespace WebMvc.Controllers
 
         public async Task<IActionResult> Signout()
         {
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            await HttpContext.SignOutAsync(OpenIdConnectDefaults.AuthenticationScheme);
+            await HttpContext.SignOutAsync("Cookies");
+            await HttpContext.SignOutAsync("oidc");
+
+            //await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            //await HttpContext.SignOutAsync(OpenIdConnectDefaults.AuthenticationScheme);
 
             ////// "Catalog" because UrlHelper doesn't support nameof() for controllers
             ////// https://github.com/aspnet/Mvc/issues/5853
-            var homeUrl = Url.Action(nameof(EventsController.Index), "Catalog");
-            return new SignOutResult(OpenIdConnectDefaults.AuthenticationScheme,
+            var homeUrl = Url.Action(nameof(EventsController.Index), "Events");
+            return new SignOutResult("oidc",
                 new AuthenticationProperties { RedirectUri = homeUrl });
         }
     }

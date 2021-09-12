@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,15 @@ namespace EventsAPI
             var databasePassword = Configuration["DatabasePassword"];
             var connectionString = $"Server={databaseServer};Database={databaseName};User Id={databaseUser};Password={databasePassword}";
             services.AddDbContext<EventsContext>(options => options.UseSqlServer(connectionString));
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "Events On Containers - Event Catalog API",
+                    Version = "v1",
+                    Description = "Events Catalog Microservice"
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +59,11 @@ namespace EventsAPI
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseSwagger().UseSwaggerUI(e =>
+            {
+                e.SwaggerEndpoint("/swagger/v1/swagger.json", "Event Catalog API V1");
+
+            });
 
             app.UseEndpoints(endpoints =>
             {
